@@ -1,0 +1,5 @@
+node_modules/
+dist/
+*.tsbuildinfo
+contexttrim-report.html
+contexttrim-pack.md

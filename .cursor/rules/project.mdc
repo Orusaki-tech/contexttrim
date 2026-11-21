@@ -1,0 +1,15 @@
+---
+description: ContextTrim project rules
+alwaysApply: true
+---
+- Stack: Node 20+, TypeScript, run with tsx. No framework, no database, no network calls.
+- Allowed dependencies: js-tiktoken, ignore, typescript, tsx, @types/node. Ask before adding anything else.
+- Use node:util parseArgs for the CLI. Plain ANSI codes for color.
+- Core modules (walker, tokens, analyze, waste, rules) are pure: they take input and return data. Only cli.ts and fix.ts print or write.
+- Never modify or delete user files. Writing is limited to .cursorignore, .cursor/rules/project.mdc (only with --write), and contexttrim-report.html.
+- `fix` and `rules` are dry-run by default. Writing requires --write plus a y/N confirm unless --yes.
+- Every number shown that is an estimate says "estimated". Print skipped files and caps; never hide them.
+- Read thresholds and patterns from waste-rules.json and models.json, not hardcoded.
+- Handle errors with short readable messages, no stack traces.
+- Keep files small and simple. No premature abstractions.
+- Work in the phases defined in PRD.md. Stop after each phase so I can test. Commit after each working phase.

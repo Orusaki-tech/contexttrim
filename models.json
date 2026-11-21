@@ -1,0 +1,35 @@
+{
+  "note": "Prices and named windows were checked on lastVerified. Preset windows have a null source and must be labeled as presets, not as a vendor's published limit. Null prices are never shown.",
+  "lastVerified": "2026-11-21",
+  "contextWindows": [
+    { "label": "128K window", "tokens": 128000, "source": null },
+    { "label": "200K window", "tokens": 200000, "source": null },
+    {
+      "label": "Claude Opus 5.5",
+      "tokens": 1000000,
+      "source": "https://platform.claude.com/docs/en/models/opus-5-5/overview.md"
+    },
+    {
+      "label": "GPT-5 (deprecated)",
+      "tokens": 400000,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5"
+    }
+  ],
+  "prices": [
+    {
+      "model": "Claude Opus 5.5",
+      "inputPerMillionUSD": 4,
+      "source": "https://platform.claude.com/docs/en/models/opus-5-5/overview.md"
+    },
+    {
+      "model": "Claude Sonnet 5.5",
+      "inputPerMillionUSD": 2,
+      "source": "https://assets.claude.com/a04aca860a54b7323e33f449706e9b43680e1346.pdf"
+    },
+    {
+      "model": "GPT-5 (deprecated)",
+      "inputPerMillionUSD": 1.25,
+      "source": "https://developers.openai.com/api/docs/models/gpt-5"
+    }
+  ]
+}
